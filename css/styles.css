@@ -1,0 +1,568 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background-color: #2A3D45;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+#logo-texto {
+    display: flex;
+    align-items: center;
+}
+#logo {
+    width: 80px;
+    height: auto;
+    margin-right: 15px;
+}
+#texto p {
+    font-size: 18px;
+    color: #FF922F;
+    margin: 0;
+}
+
+/*botón hamburguesa */
+
+.menu-toggle {
+    display: none; 
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10; 
+}
+.menu-toggle .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Estilos del menú de navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 8px 16px;
+    border: 2px solid #555;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+nav a:hover {
+    color: #FF922F;
+    background-color: #555;
+}
+#carrito {
+    width: 20px; 
+}
+
+/* Estilos para la sección de inicio */
+
+#inicio {
+  background-image: url("/img/inicio-sierra-de-gata.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 80px ;
+  color: #fff;
+  position: relative;
+  border-radius: 10px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+ height: 500px;
+
+}
+#inicio::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0, 0, 0, 0.5); 
+ border-radius: 10px;
+ z-index: 1;
+}
+
+#inicio h2, #inicio p {
+ position: relative;
+ z-index: 2; 
+}
+
+
+#inicio h2 {
+ font-size: 32px;
+ color: #FF922F; 
+ margin-bottom: 20px;
+ margin-top: 0;
+ font-weight: bold;
+ text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+ align-self: flex-start;
+
+}
+
+#inicio p {
+ font-size: 18px;
+ line-height: 1.6;
+ color: #f4f4f4;
+ max-width: 700px;
+ margin: 0 ;
+ text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/*estilos para la sección de audio*/
+
+#audio-inicio{
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid #2A3D45;
+  
+}
+
+/*estilos para nuestros productos */
+
+#nuestros-productos {
+  background-color: #f9f5f1; 
+  padding: 60px 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  text-align: center;
+}
+
+#nuestros-productos h2 {
+  font-size: 30px;
+  color: #2A3D45;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#nuestros-productos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+#nuestros-productos li {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+  padding-left: 30px;
+  position: relative;
+}
+
+#nuestros-productos li::before {
+  content: "🍯"; 
+  position: absolute;
+  left: 0;
+  font-size: 20px;
+  color: #FF922F; 
+}
+
+#nuestros-productos p {
+  font-size: 18px;
+  color: #555;
+  padding: 20px;
+  line-height: 1.6;
+  margin: 0 auto;
+
+}
+/* Video */
+video{
+  width: 60%;
+  border-radius: 20px;
+}
+
+/* Seccion Galeria*/
+
+#galeria-imagenes {
+  background-color: #f9f5f1;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 80%;
+  text-align: center;
+}
+
+#galeria-imagenes h2 {
+  font-size: 32px;
+  color: #2A3D45;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.galeria img {
+  width: 30%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+
+/*Formulario */ 
+#contacto {
+  width: 80%; 
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contacto h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input, textarea, select{
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+  border-color: #FF922F; 
+  outline: none;
+}
+
+textarea {
+  resize: vertical; 
+  min-height: 150px;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #FF922F; 
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e77f26; 
+}
+
+
+
+/* media query para pantallas pequeñas */
+
+@media (max-width: 1020px) {
+
+    header{
+        width: 100%;
+    
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999; 
+    }
+    .menu-toggle {
+        display: flex; 
+    }
+    #nav-menu {
+        display: none; 
+        width: 100%;
+        background-color: #2A3D45;
+        position: absolute;
+        top: 100px; 
+        left: 0;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    #nav-menu.active {
+        display: block;
+    }
+
+    nav ul {
+        background-color: none ;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    nav a {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+    #galeria {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+    }
+  
+/*PAGINA TIENDA MIEL + OTROS PRODUCTOS*/
+
+/* seccion de bienvenida */
+
+#bienvenida {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f9f5f1;
+  border-bottom: 2px solid #FF922F;
+}
+
+#bienvenida h1 {
+  font-size: 36px;
+  color: #2A3D45;
+  margin-bottom: 10px;
+}
+
+#bienvenida p {
+  font-size: 18px;
+  color: #333;
+}
+
+/* sección de productos */
+#productos h2, #otros-productos h2 {
+  font-size: 32px;
+  color: #2A3D45;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.producto {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #fff;
+  width: 90%;
+
+}
+
+.producto img {
+width: 100px;
+}
+
+.producto h3 {
+  font-size: 24px;
+  color: #FF922F;
+  align-items: center;
+}
+
+.producto p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.boton-compra {
+  display: inline-block;
+  background-color: #FF922F;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.boton-compra:hover {
+  background-color: #e77f26;
+}
+
+/* footer */
+#footer {
+  background-color: #2A3D45;
+color: white;
+  padding: 40px 20px;
+  font-size: 16px;
+}
+
+.footer-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+}
+
+#footer-logo {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 18px;
+  color: #FF922F;
+}
+
+.footer-contacto {
+  margin-top: 20px;
+}
+
+.footer-contacto h3 {
+  font-size: 20px;
+  color: #FF922F;
+  margin-bottom: 10px;
+}
+
+.footer-contacto p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: white;
+}
+/* ESTILOS PAGINA APICULTURA */
+#apicultura-sierra-gata {
+  background-color: #f9f5f1;
+  padding: 60px 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  width: 80%;
+  text-align: left;
+  position: relative;
+  background-image: url("img/sierra-gata-bg.jpg"); 
+  background-size: cover;
+  background-position: center;
+  color: #333;
+  overflow: hidden;
+}
+
+
+#apicultura-sierra-gata h1, #apicultura-sierra-gata h2, #apicultura-sierra-gata p, #apicultura-sierra-gata ul {
+  position: relative;
+  z-index: 2;
+}
+
+#apicultura-sierra-gata h1 {
+  font-size: 36px;
+  color: #2A3D45;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#apicultura-sierra-gata h2 {
+  font-size: 24px;
+  color: #FF922F;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#apicultura-sierra-gata p, #apicultura-sierra-gata ul {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin: auto;
+}
+
+#apicultura-sierra-gata ul {
+  list-style: none;
+}
+
+#apicultura-sierra-gata li {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+#apicultura-sierra-gata li::before {
+  content: "🍯";
+  position: absolute;
+  left: 0;
+  color: #FF922F;
+  font-size: 20px;
+}
+
+#apicultura-sierra-gata .galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+#apicultura-sierra-gata .galeria img {
+  width: 30%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+#apicultura-sierra-gata .galeria img:hover {
+  transform: scale(1.05);
+}
